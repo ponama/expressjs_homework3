@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>express.js</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<form method="post" action="/">
+	<input id="name" type="text" name="name">
+	<textarea id="body" name="body"></textarea>
+	<input id="but" type="submit">
+</form>
+<% arr.forEach(function(elm){ %>
+<div>
+	<h1><%= elm.name %></h1>
+	<p><%= elm.body %></p>
+</div>
+<% }); %>
+</body>
+</html>
