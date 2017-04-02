@@ -27,9 +27,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
  
 app.post('/', function (req, res) {
 	var formName = req.body.name;
-	var formBody = req.body.body;
-	if (formName < 1 || formBody <1){
-		res.send('require more than one simbol');
+	var formBody = req.body.comment;
+	if (formName.length < 5 || formBody.length <2){ // Я бы сделал валидацию по длинне))
+		res.send('require more simbols');
 	}
 	if(req.xhr){
 		res.json(req.body);
@@ -42,7 +42,7 @@ app.post('/', function (req, res) {
 
 app.get('/', function (req, res) {
 	res.render('index.ejs', {
-		arr: articles
+		arr: articles 
 	});
 });
 
